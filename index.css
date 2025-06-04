@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  background-color: #1b244a;
+  color: white;
+  font-family: "Orbitron", sans-serif; /* Optional digital-style font */
+}
+
+/* Container: adjusts layout on different screen sizes */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.box {
+  flex: 1 1 300px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #222;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+h3 {
+  font-weight: 1000;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.score {
+  background-color: #080001;
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0;
+  color: #f94f6d;
+  font-size: 4rem;
+  padding: 1rem 0;
+  border-radius: 8px;
+}
+
+/* Buttons */
+.incrementers {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.btn,
+.reset-btn {
+  border: 1px solid #9aabd8;
+  background-color: #1b244a;
+  color: #9aabd8;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: 0.3s;
+  font-family: "Orbitron", sans-serif;
+}
+
+.btn:hover,
+.reset-btn:hover {
+  cursor: pointer;
+  background-color: #9aabd8;
+  color: #1b244a;
+}
+
+.reset-btn {
+  margin-top: auto;
+}
+
+.timer-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 300px;
+  max-width: 400px;
+  background-color: #222;
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
+}
+
+.timer-display {
+  background-color: #080001;
+  font-size: 3rem;
+  color: #00ff00;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Responsive Text Sizes */
+@media (max-width: 768px) {
+  h3 {
+    font-size: 2rem;
+  }
+  .score {
+    font-size: 3rem;
+  }
+  .btn,
+  .reset-btn {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .box {
+    width: 90%;
+  }
+  .score {
+    font-size: 2.5rem;
+  }
+}
